@@ -1,0 +1,32 @@
+body {
+  background-color: #f8f7f1;
+}
+
+h2 {
+  color: #302080; !important;
+  text-align: center;
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+}
+
+li{
+  font-size: 120%;
+}
+
+.intro{
+  color: #cccece;
+  background-color: #04093c;
+  opacity: 90%;
+  line-height: 200px;
+  height: 200px;
+  text-align: center;
+}
+
+.intro h1 {
+  line-height: 1.5;
+  display: inline-block;
+  vertical-align: middle;
+}
