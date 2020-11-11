@@ -1,12 +1,20 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block title %}Home{% endblock %}
 {% block thema %}Home{% endblock %}
 {% block content %}
-<p>In our group, we apply computational tools to analyze properties of glycosaminoglycans (GAGs),
-    negatively charged sulfated periodic polysaccharides,
-    and develop new approaches to study the GAG-containing biomolecular systems more effectively.
-    Our work is useful for theoretical rationale in the development of novel strategies for tissue regeneration,
-    where GAGs play a crucial role.
-</p>
+<div class="row">
+
+    <div class="col-6 m-2">
+        <p >In our group, we apply computational tools to analyze properties of glycosaminoglycans (GAGs),
+            negatively charged sulfated periodic polysaccharides,
+            and develop new approaches to study the GAG-containing biomolecular systems more effectively.
+            Our work is useful for theoretical rationale in the development of novel strategies for tissue regeneration,
+            where GAGs play a crucial role.
+        </p>
+    </div>
+    <div class="col-5 m-2">
+        <img class="w-100 m-2" src="{% static 'images/starting2.jpg' %}" alt="" loading="lazy">
+    </div>
+</div>
 {% endblock %}

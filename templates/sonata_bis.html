@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Sonata bis{% endblock %}
+{% block thema %}Sonata bis{% endblock %}
+{% block content %}
+
+    <h3>Project title:</h3>
+
+    <h2><i><b>    “Modeling of glycosaminoglycan-induced formation of protein structure and enhancement of
+        biologically relevant protein-ligand interactions”
+</b></i></h2>
+    <hr>
+<ul>
+    <li>Funding Programme: SONATA BIS from National Science Centre (Poland)</li>
+    <li>Duration: 03.06.2019-02.06.2024</li>
+    <li>Budget: 2 477 304 PLN (579 000 EUR)</li>
+    <li>Project Leader: Sergey Samsonov</li>
+    <li><a href="https://projekty.ncn.gov.pl/index.php?projekt_id=418479">NCN link</a></li>
+</ul>
+<p>
+    <button class="btn btn-secondary btn-lg" type="button" data-toggle="collapse" data-target="#abstract"
+            aria-expanded="false" aria-controls="abstract"><b>Abstract</b></button>
+
+</p>
+    <div class="collapse project" id="abstract">
+
+        <b>The goal of the proposed project is to determine the role of glycosaminoglycans (GAGs) in the mediation of biologically relevant protein-ligand interactions by means of molecular modeling approaches, some of which will be developed in this study for the GAG containing systems. The result of this research will serve to guide the design of new methods for tissue regeneration and healing.</b>
+    </div>
+<p>
+    <button class="btn btn-secondary btn-lg" type="button" data-toggle="collapse" data-target="#objectives"
+            aria-expanded="false" aria-controls="objectives" ><b>Objectives and hypotheses</b></button>
+</p>
+<div class="collapse project" id="objectives">
+
+Understanding molecular mechanisms underlying the key cellular processes is a crucial challenge in biosciences. In these lines, studying interactions between the molecular participants of these processes is necessary to improve such an understanding. Molecular modeling tremendously advanced in its significance and applicability to tackle this challenge due to the dramatic development in computational technologies recently. This allows to use computational approaches not only to complement experimental studies but also to analyze molecular systems gaining principally new insights unfeasible for the experimental techniques. In this project, we are going to model biomolecular interactions in the extracellular matrix (ECM) with a focus on one of its major components, glycosaminoglycans (GAGs). GAGs represent a class of long linear anionic periodic polysaccharides made up of repetitive disaccharide units. Owned to the interactions with diverse proteins such as cytokines, growth factors, collagen, antithrombin, they are active participants in anticoagulation, proliferation, adhesion, cell signaling and immune mechanisms. As a consequence, GAGs were shown to be key players in a number of diseases associated with the pathologies of different tissue development as well as inflammatory/autoimmune disorders, cancer, prion and Alzheimer’s diseases. This renders GAGs to be very promising targets for the design of novel biomaterials to selectively control and promote the processes for potential medical applications in the field of bone and skin regeneration. However, often molecular mechanisms underlying GAG-mediated processes in the ECM are not fully elucidated, and application of experimental techniques is not sufficient alone for characterization of the interactions occurring at molecular levels. Therefore, theoretical approaches beneficially contribute to the understanding of the role of GAGs by bringing principally new and experimentally inaccessible details. Despite substantial success of the recent studies aimed to model GAG-mediated interactions, computational approaches still experience challenges due to GAGs high flexibility, long chains, symmetry, periodicity as well as their anionic nature rendering a requirement for rigorous solvent and electrostatic treatment. It is still not clear if protein/peptide-GAG recognition is predominantly electrostatically driven or specific. In our work, we plan to address the mentioned challenges. In these lines, we are going to reveal the function of GAGs in biologically relevant systems in terms of their impact on protein conformational properties and enhancement of protein-ligand interactions. To achieve the goal, we specify several tasks to accomplish:
+i) characterization of GAG interactions with particular protein targets as integrins, anastellin, cathepsin proteases, sclerostin; ii)  characterization of GAG interactions with biologically active small molecules; iii) analysis of the impact of different ions on GAG structure and GAG-mediated interactions; iv) analysis of the GAG effect on peptides structuring; v) creation of coarse-grained parameters for GAGs to model multicomponent molecular complexes and systems with high conformational flexibility; vi) further development of computational methodologies specifically for the GAG containing systems.
+</div>
+<p>
+    <button class="btn btn-secondary btn-lg" type="button" data-toggle="collapse" data-target="#methodology"
+            aria-expanded="false" aria-controls="methodology"><b>Methodology</b></button>
+
+</p>
+    <div class="collapse project" id="methodology">
+
+    We are going to apply such computational approaches as: i) molecular docking to predict the binding pose of the complexes for which 3D experimental data are not available; ii) molecular dynamics to describe the behaviour of a molecular system in time allowing for determining dynamic and energetic properties of the system; iii) coarse-grained modeling to analyze big multicomponent systems in terms of their structural and energetic properties at the timescales unfeasible for all atomic modeling approaches. We will tightly collaborate with experimental groups (Universities of Lyon, Tours, Leipzig; Hungarian Academy of Sciences, Budapest), who are going to provide us with GAG-related experimental data (NMR, SAXS, SPR, biochemical assays, CD spectroscopy) on the above-mentioned analyzed systems.</div>
+<p>
+    <button class="btn btn-secondary btn-lg" type="button" data-toggle="collapse" data-target="#impact"
+            aria-expanded="false" aria-controls="impact"><b>Impact of the research</b></button>
+
+</p>
+    <div class="collapse project" id="impact">
+
+     The expected results will contribute to the knowledge on the molecular interactions with GAGs and the effects of GAGs on protein structure for particular biologically relevant systems, therefore, complementing and supporting experimental data as well as serving as rational basis for guiding further experimental work. The planned data will deepen our understanding of the fundamental properties of the GAG containing systems, while the development of system-specific methodology could be useful to steer a choice of computational pipelines to be applied in theoretical studies of these systems and for the improved complementation with the experiments. Coarse-grained modeling will provide principally novel insights into the GAG-mediated multimolecular processes in the ECM, which are inaccessible by all atomic approaches. Altogether, the outcome of the planned studies will add to the data which could be beneficial for establishing and maintaining innovative strategies in the field of regenerative medicine and therapies for numerous diseases involving GAGs. </div>
+
+{% endblock %}

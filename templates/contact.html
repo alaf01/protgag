@@ -8,11 +8,8 @@
 <h2><b>Modeling Group</b></h2>
 <h2>Laboratory of Molecular Modeling</h2>
 <h2>Faculty of Chemistry, University of Gdańsk</h2>
-    <div class="clearfix">
-        <span class="float-left m-5">
-            <img class="w-100" src="{% static 'image.jpeg' %}" alt="" loading="lazy">
-        </span>
-        <span class="float-left m-5">
+    <div class="row">
+        <div class="col-5 m-5 contact">
             <p>ul. Wita Stwosza 63</p>
             <p>80-308 Gdańsk, Poland</p>
             <p>phone: +48 58 523 5166</p>
@@ -20,6 +17,9 @@
 
             <p>Sergey Samsonov, dr hab.</p>
             <p>sergey.samsonov(at)ug.edu.pl</p>
-         </span>
+         </div>
+        <div class="col-5 m-5">
+            <img class="w-100" src="{% static 'image.jpeg' %}" alt="" loading="lazy">
+        </div>
     </div>
 {% endblock %}

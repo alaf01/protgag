@@ -9,15 +9,37 @@ h2 {
 
 p {
   font-family: verdana;
-  font-size: 20px;
 }
 
 li{
   font-size: 120%;
 }
+img {
+  float: right;
+}
+.home{
+  padding: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.inside{
+  padding: 5%;
+  font-size: 1.2em;
+  color: #162777;
+  text-align: justify;
+  text-justify: inter-word;
+}
+.inside p{
+  font-size: 1.4em;
+}
+
+.contact{
+  font-size: 16px;
+}
 
 .intro{
-  color: #cccece;
+  color: #e3ecec;
   background-color: #04093c;
   opacity: 90%;
   line-height: 200px;
@@ -29,4 +51,54 @@ li{
   line-height: 1.5;
   display: inline-block;
   vertical-align: middle;
+  text-shadow: 1px 1px 2px ;
+}
+
+.team_paper {
+  background-color: #cbd7ee;
+  color: #000000;
+}
+
+.member {
+}
+
+.collaboration li:before {
+  content: "\f00c"; /* FontAwesome Unicode */
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: -1.3em; /* same as padding-left set on li */
+  width: 1.3em; /* same as padding-left set on li */
+}
+
+.collaboration li{
+  padding-bottom: 10px;
+  list-style-position: inside;
+}
+
+.collaboration a{
+  color: #162777;
+}
+.collaboration a:hover{
+  border-radius: 5px;
+  background-color: #2a6ba9;
+  color: #c4cdcd;
+  text-decoration: none;
+}
+.pubyear{
+  margin:30px;
+}
+
+.news-descr{
+  margin-top: 20px;
+  margin-bottom: 70px;
+}
+.research{
+  margin:5%;
+}
+
+.project{
+  margin:20px;
+}
+.downloads li{
+  list-style-type: None;
 }

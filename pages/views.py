@@ -7,7 +7,7 @@ def home(request):
 
 
 def news(request):
-    news = News.objects.all()
+    news = News.objects.all().order_by('-added')
     return render(request, "news.html", {'news': True, 'queryset': news})
 
 
@@ -19,12 +19,20 @@ def projects(request):
     return render(request, "projects.html", {'projects': True})
 
 
-def preludium(request):
-    return render(request, "preludium.html", {'preludium': True})
-
-
 def polonez(request):
     return render(request, "polonez.html", {'polonez': True})
+
+
+def beethoven(request):
+    return render(request, "beethoven.html", {'beethoven': True})
+
+
+def sonata_bis(request):
+    return render(request, "sonata_bis.html", {'sonata_bis': True})
+
+
+def preludium(request):
+    return render(request, "preludium.html", {'preludium': True})
 
 
 def publications(request):
