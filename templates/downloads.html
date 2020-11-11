@@ -7,6 +7,558 @@
 {% block content %}
     <ul class="downloads">
     <li><h1>Libraries</h1></li>
+        <div >
+        <div class="panel-body">
+
+            <p><strong>In order to use these libraries for production of topology and coordinate files to be further used for AMBER simulations do the following in tleap or xleap:</strong></p><br>
+            <p><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Source GLYCAM06 force field:
+              source $AMBERHOME/dat/leap/cmd/leaprc.GLYCAM_06j-1</p>
+            <p><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Load the library (LIB.lib) you need:
+              loadoff LIB.lib</p>
+            <p><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Now you can either use sequence command to build your GAG: new_unit=sequence { … LIB …}</p>
+            <p><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Or you can read the data from the pdb, where the residues are already renamed to be compatible with the nomenclature of the libraries:new_unit=loadpdb my_pdb_which_includes_residue_LIB.pdb </p>
+            <br>
+            <p><strong>Be careful Ido2UA residues:</strong>if you want to build a heparin molecule or a molecule, which contains Ido2UA, pay attention to the fact that this residue rather exists in <sup>1</sup>C<sub>4</sub>and <sup>2</sup>S<sub>0</sub> conformations. In our libraries, however, <strong>ALL</strong> the residues are in <sup>4</sup>C<sub>1</sub> conformation. Therefore, <strong>DO NOT</strong> use sequence command to build your GAG. Instead you can use these two prepared files with heparin dp10 with Ido2SUA in <sup>1</sup>C<sub>4</sub> and <sup>2</sup>S<sub>0</sub> conformations and read them by loadpdb command. These structures originate from the experimental structure (PDB ID: 1HPN) and contain already renamed residues/atoms to be compatible with our libraries. If you use an experimental structure of a protein complex with heparin, just rename the residues according to the nomenclature in our libraries and read them in. The same applies to the residues, for which you know that their conformations are not <sup>4</sup>C<sub>1</sub>.</p>
+            <br>
+            <p>1. Case DA, Berryman JT, Betz RM, Cerutti DS, Cheatham TE, Darden TA, Duke RE, Giese TJ, Gohlke H, Goetz AW, Homeyer N, Izadi S, Janowski P, Kaus J, Kovalenko A, Lee TS, LeGrand S, Li P, Luchko T, Luo R, Madej B, Merz KM, Monard G, Needham P, Nguyen H, Nguyen HT, Omelyan I, Onufriev A, Roe DR, Roitberg A, Salomon-Ferrer R, Simmerling CL, Smith W, Swails J, Walker RC, Wang J, Wolf RM, Wu X, York DM, Kollman PA. AMBER 14. San Francisco: University of California; 2015.</p>
+
+            <p>2. Kirschner K, Yongye A, Tschampel S, González-Outeiriño J, DaNon-terminalls C, Foley L, Woods R. GLYCAM06: a generalizable biomolecular force field. carbohydrates. J. Comput. Chem. 2008;29:622–655.</p>
+
+            <p>3. Huige C, Altona C. Force field parameters for sulfates and sulfamates based on Ab initio calculations: extensions of AMBER and CHARMm Fields. J. Comput. Chem. 1995;16:56–79.</p>
+            <br>
+
+            <div class="page-header"> </div>
+
+
+
+<div class="panel-body">
+            <div class="table-responsive">
+                <table class="table table-hover table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>AMBER library <p>(residue name)</p><p></p></th>
+                            <th>Chemical formula<p></p><p></p></th>
+                            <th>Terminal<p>/non-terminal</p><p></p></th>
+                            <th>Carbon participating<p>in glycosidic linkage</p><p></p></th>
+                            <th>Sulfation pattern<p></p><p></p></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a href="{% static 'libraries/01G.lib' %}">01G</a>
+                            </td>
+                            <td>
+                                α-D-Glc(2S,3S,6S)
+                            </td>
+                            <td>Terminal</td>
+                            <td>-</td>
+                            <td>2S, 3S, 6S</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="{% static 'libraries/02u.lib' %}">02u</a>
+                            </td>
+                            <td>
+                                α-L-IdoA(2S)
+                            </td>
+                            <td>Terminal</td>
+                            <td>-</td>
+                            <td>2S</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                 <a href="{% static 'libraries/02Y.lib' %}">02Y</a>
+                            </td>
+                            <td>
+                                α-D-Glc(NS)
+                            </td>
+                            <td>Terminal</td>
+                            <td>-</td>
+                            <td>NS</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                 <a href="{% static 'libraries/02Z.lib' %}">02Z</a>
+                            </td>
+                            <td>
+                                β-D-GlcA(2S)
+                            </td>
+                            <td>Terminal</td>
+                            <td>-</td>
+                            <td>2S</td>
+                        </tr>
+                    <tr>
+                            <td>
+                                 <a href="{% static 'libraries/03u.lib' %}">03u</a>
+                            </td>
+                            <td>
+                                α-L-IdoA(3S)
+                            </td>
+                            <td>Terminal</td>
+                            <td>-</td>
+                            <td>3S</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                 <a href="{% static 'libraries/03Z.lib' %}">03Z</a>
+                            </td>
+                            <td>
+                                β-D-GlcA(3S)
+                            </td>
+                            <td>Terminal</td>
+                            <td>-</td>
+                            <td>3S</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                 <a href="{% static 'libraries/04B.lib' %}">04B</a>
+                            </td>
+                            <td>
+                                β-D-GlcNAc(4S)
+                            </td>
+                            <td>Terminal</td>
+                            <td>-</td>
+                            <td>4S</td>
+                                </tr>
+        <tr>
+                            <td>
+                                 <a href="{% static 'libraries/04V.lib' %}">04V</a>
+                            </td>
+                            <td>
+                                β-D-GalNAc(4S)
+                            </td>
+                            <td>Terminal</td>
+                            <td>-</td>
+                            <td>4S</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                 <a href="{% static 'libraries/04Y.lib' %}">04Y</a>
+                            </td>
+                            <td>
+                                α-D-GlcNAc(4S)
+                            </td>
+                            <td>Terminal</td>
+                            <td>-</td>
+                            <td>4S</td>
+                        </tr>
+                     <tr>
+                            <td>
+                                 <a href="{% static 'libraries/06B.lib' %}">06B</a>
+                            </td>
+                            <td>
+                                α-D-GlcNAc(6S)
+                            </td>
+                            <td>Terminal</td>
+                            <td>-</td>
+                            <td>6S</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                 <a href="{% static 'libraries/06L.lib' %}">06L</a>
+                            </td>
+                            <td>
+                                β-D-Gal(6S)
+                            </td>
+                            <td>Terminal</td>
+                            <td>-</td>
+                            <td>6S</td>
+                        </tr>
+                            <tr>
+                            <td>
+                                <a href="{% static 'libraries/06V.lib' %}">06V</a>
+                            </td>
+                            <td>
+                                β-D-GalNAc(6S)
+                            </td>
+                            <td>Terminal</td>
+                            <td>-</td>
+                            <td>6S</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                 <a href="{% static 'libraries/06Y.lib' %}">06Y</a>
+                            </td>
+                            <td>
+                                α-D-GlcNAc(6S)
+                            </td>
+                            <td>Terminal</td>
+                            <td>-</td>
+                            <td>6S</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                 <a href="{% static 'libraries/07B.lib' %}">07B</a>
+                            </td>
+                            <td>
+                                α-D-GlcNAc(4S,6S)
+                            </td>
+                            <td>Terminal</td>
+                            <td>-</td>
+                            <td>4S,6S</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                 <a href="{% static 'libraries/07u.lib' %}">07u</a>
+                            </td>
+                            <td>
+                                α-L-IdoA(2S,3S)
+                            </td>
+                            <td>Terminal</td>
+                            <td>-</td>
+                            <td>2S,3S</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                 <a href="{% static 'libraries/07V.lib' %}">07V</a>
+                            </td>
+                            <td>
+                                β-D-GalNAc(4S,6S)
+                            </td>
+                            <td>Terminal</td>
+                            <td>-</td>
+                            <td>4S,6S</td>
+                        </tr>
+                           <tr>
+                            <td>
+                                 <a href="{% static 'libraries/07Y.lib' %}">07Y</a>
+                            </td>
+                            <td>
+                                α-D-Glc(6S,NS)
+                            </td>
+                            <td>Terminal</td>
+                            <td>-</td>
+                            <td>6S,NS</td>
+                        </tr>
+
+                           <tr>
+                            <td>
+                                 <a href="{% static 'libraries/07Z.lib' %}">07Z</a>
+                            </td>
+                            <td>
+                                β-D-GlcA(2S,3S)
+                            </td>
+                            <td>Terminal</td>
+                            <td>-</td>
+                            <td>2S,3S</td>
+                        </tr>
+                           <tr>
+                            <td>
+                                 <a href="{% static 'libraries/08G.lib' %}">08G</a>
+                            </td>
+                            <td>
+                                α-D-Glc(2S,6S)
+                            </td>
+                            <td>Terminal</td>
+                            <td>-</td>
+                            <td>2S,6S</td>
+                        </tr>
+                           <tr>
+                            <td>
+                               <a href="{% static 'libraries/09G.lib' %}">09G</a>
+                            </td>
+                            <td>
+                                α-D-Glc(3S,6S)
+                            </td>
+                            <td>Terminal</td>
+                            <td>-</td>
+                            <td>3S,6S</td>
+                        </tr>
+                          <tr>
+                            <td>
+                                 <a href="{% static 'libraries/S7Z.lib' %}">S7Z</a>
+                            </td>
+                            <td>
+                                β-D-GlcA(2S,3S,4S)
+                            </td>
+                            <td>Terminal</td>
+                            <td>-</td>
+                            <td>2S,3S,4S</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                 <a href="{% static 'libraries/34B.lib' %}">34B</a>
+                            </td>
+                            <td>
+                                β-D-GlcNAc(4S)
+                            </td>
+                            <td>Non-Terminal</td>
+                            <td>3</td>
+                            <td>4S</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                 <a href="{% static 'libraries/34V.lib' %}">34V</a>
+                            </td>
+                            <td>
+                                β-D-GalNAc(4S)
+                            </td>
+                            <td>Non-Terminal</td>
+                            <td>3</td>
+                            <td>4S</td>
+                        </tr>
+                                <tr>
+                            <td>
+                                 <a href="{% static 'libraries/36B.lib' %}">36B</a>
+                            </td>
+                            <td>
+                                α-D-GlcNAc(6S)
+                            </td>
+                            <td>Non-Terminal</td>
+                            <td>3</td>
+                            <td>6S</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                 <a href="{% static 'libraries/36L.lib' %}">36L</a>
+                            </td>
+                            <td>
+                                β-D-Gal(6S)
+                            </td>
+                            <td>Non-Terminal</td>
+                            <td>3</td>
+                            <td>6S</td>
+                        </tr>
+<tr>
+                            <td>
+                                 <a href="{% static 'libraries/36V.lib' %}">36V</a>
+                            </td>
+                            <td>
+                                β-D-GalNAc(6S)
+                            </td>
+                            <td>Non-Terminal</td>
+                            <td>3</td>
+                            <td>6S</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                 <a href="{% static 'libraries/36Y.lib' %}">36Y</a>
+                            </td>
+                            <td>
+                                α-D-GlcNAc(6S)
+                            </td>
+                            <td>Non-Terminal</td>
+                            <td>3</td>
+                            <td>6S</td>
+                        </tr>
+                         <tr>
+                            <td>
+                                 <a href="{% static 'libraries/37B.lib' %}">37B</a>
+                            </td>
+                            <td>
+                                β-D-GlcNAc(4S,6S)
+                            </td>
+                            <td>Non-Terminal</td>
+                            <td>3</td>
+                            <td>4S,6S</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                 <a href="{% static 'libraries/37V.lib' %}">37V</a>
+                            </td>
+                            <td>
+                                β-D-GalNAc(4S,6S)
+                            </td>
+                            <td>Non-Terminal</td>
+                            <td>3</td>
+                            <td>4S,6S</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                 <a href="{% static 'libraries/39Y.lib' %}">39Y</a>
+                            </td>
+                            <td>
+                                α-D-GlcNAc(4S,6S)
+                            </td>
+                            <td>Non-Terminal</td>
+                            <td>3</td>
+                            <td>4S,6S</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                 <a href="{% static 'libraries/41G.lib' %}">41G</a>
+                            </td>
+                            <td>
+                                β-D-Glc(2S,3S,6S)
+                            </td>
+                            <td>Non-Terminal</td>
+                            <td>4</td>
+                            <td>2S,3S,6S</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                 <a href="{% static 'libraries/42u.lib' %}">42u</a>
+                            </td>
+                            <td>
+                                α-L-IdoA(2S)
+                            </td>
+                            <td>Non-Terminal</td>
+                            <td>4</td>
+                            <td>2S</td>
+                        </tr>
+                         <tr>
+                            <td>
+                                 <a href="{% static 'libraries/42Y.lib' %}">42Y</a>
+                            </td>
+                            <td>
+                                α-D-Glc(NS)
+                            </td>
+                            <td>Non-Terminal</td>
+                            <td>4</td>
+                            <td>NS</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                 <a href="{% static 'libraries/42Z.lib' %}">42Z</a>
+                            </td>
+                            <td>
+                               β-D-GlcA(2S)
+                            </td>
+                            <td>Non-Terminal</td>
+                            <td>4</td>
+                            <td>2S</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                 <a href="{% static 'libraries/43u.lib' %}">43u</a>
+                            </td>
+                            <td>
+                               α-L-IdoA(3S)
+                            </td>
+                            <td>Non-Terminal</td>
+                            <td>4</td>
+                            <td>3S</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                 <a href="{% static 'libraries/43Z.lib' %}">43Z</a>
+                            </td>
+                            <td>
+                               α-D-GlcA(3S)
+                            </td>
+                            <td>Non-Terminal</td>
+                            <td>4</td>
+                            <td>3S</td>
+                        </tr>
+                         <tr>
+                            <td>
+                                 <a href="{% static 'libraries/46V.lib' %}">46V</a>
+                            </td>
+                            <td>
+                               β-D-GalNAc(6S)
+                            </td>
+                            <td>Non-Terminal</td>
+                            <td>4</td>
+                            <td>6S</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                 <a href="{% static 'libraries/46Y.lib' %}">46Y</a>
+                            </td>
+                            <td>
+                               α-D-GlcNAc(6S)
+                            </td>
+                            <td>Non-Terminal</td>
+                            <td>4</td>
+                            <td>6S</td>
+                        </tr>
+                            <tr>
+                            <td>
+                                 <a href="{% static 'libraries/47u.lib' %}">47u</a>
+                            </td>
+                            <td>
+                              α-L-IdoA(2S,3S)
+                            </td>
+                            <td>Non-Terminal</td>
+                            <td>4</td>
+                            <td>2S,3S</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                 <a href="{% static 'libraries/47Y.lib' %}">47Y</a>
+                            </td>
+                            <td>
+                              α-D-Glc(6S,NS)
+                            </td>
+                            <td>Non-Terminal</td>
+                            <td>4</td>
+                            <td>6S,NS</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                 <a href="{% static 'libraries/47Z.lib' %}">47Z</a>
+                            </td>
+                            <td>
+                              β-D-GlcA(2S,3S)
+                            </td>
+                            <td>Non-Terminal</td>
+                            <td>4</td>
+                            <td>3S,3S</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                 <a href="{% static 'libraries/48G.lib' %}">48G</a>
+                            </td>
+                            <td>
+                              α-D-Glc(2S,6S)
+                            </td>
+                            <td>Non-Terminal</td>
+                            <td>4</td>
+                            <td>2S,6S</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                 <a href="{% static 'libraries/49G.lib' %}">49G</a>
+                            </td>
+                            <td>
+                              α-D-Glc(3S,6S)
+                            </td>
+                            <td>Non-Terminal</td>
+                            <td>4</td>
+                            <td>3S,6S</td>
+                        </tr>
+                         <tr>
+                            <td>
+                                 <a href="{% static 'libraries/46B.lib' %}">46B</a>
+                            </td>
+                            <td>
+                              α-D-GlcNAc(6S)
+                            </td>
+                            <td>Non-Terminal</td>
+                            <td>4</td>
+                            <td>6S</td>
+                        </tr>
+                          <tr>
+                            <td>
+                                 <a href="{% static 'libraries/49Y.lib' %}">49Y</a>
+                            </td>
+                            <td>
+                              α-D-Glc(2S,6S,NS)
+                            </td>
+                            <td>Non-Terminal</td>
+                            <td>4</td>
+                            <td>2S,6S,NS</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                 <a href="{% static 'libraries/ROS.lib' %}">ROS</a>
+                            </td>
+                            <td>
+                              SO<sub>3</sub><sup>-</sup>
+                            </td>
+                            <td>Non-Terminal</td>
+                            <td>4</td>
+                            <td>2S,6S,NS</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+     </div>
+    </div>
+  </div>
+
     <li><h1>Scripts/protocols</h1></li>
     <li><h1>Teaching materials</h1></li>
     </ul>

@@ -5,7 +5,7 @@
 {% block content %}
     {%for new in queryset %}
         <div class="news-descr">
-        <h1 >{{ new.title }}</h1>
+            <h3><b>{{ new.title }}</b></h3>
         <p class="news-descr">{{ new.description }}</p>
         <hr>
         </div>

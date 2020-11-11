@@ -7,6 +7,11 @@ h2 {
   text-align: center;
 }
 
+.inside h1, h2, h3, h4 {
+    font-family: Lato,sans-serif;
+    font-weight: 300;
+    color: #394cdb;
+}
 p {
   font-family: verdana;
 }
@@ -16,6 +21,11 @@ li{
 }
 img {
   float: right;
+  display: inline-block;
+  height: auto;
+}
+.wider{
+  max-width: 45%;
 }
 .home{
   padding: 20px;
@@ -24,7 +34,8 @@ img {
 }
 
 .inside{
-  padding: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
   font-size: 1.2em;
   color: #162777;
   text-align: justify;
@@ -42,8 +53,8 @@ img {
   color: #e3ecec;
   background-color: #04093c;
   opacity: 90%;
-  line-height: 200px;
-  height: 200px;
+  line-height: 300px;
+  height: 300px;
   text-align: center;
 }
 
@@ -94,6 +105,7 @@ img {
 }
 .research{
   margin:5%;
+  min-height: 500px;
 }
 
 .project{
@@ -101,4 +113,11 @@ img {
 }
 .downloads li{
   list-style-type: None;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 35%;
+  max-height: 400px;
 }
