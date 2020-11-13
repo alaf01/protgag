@@ -1,3 +1,4 @@
+{% load static %}
 body {
   background-color: #f8f7f1;
 }
@@ -25,7 +26,7 @@ img {
   height: auto;
 }
 .wider{
-  max-width: 45%;
+  max-width: 55%;
 }
 .home{
   padding: 20px;
@@ -63,6 +64,7 @@ img {
   display: inline-block;
   vertical-align: middle;
   text-shadow: 1px 1px 2px ;
+  font-size: 4em;
 }
 
 .team_paper {
@@ -73,21 +75,13 @@ img {
 .member {
 }
 
-.collaboration li:before {
-  content: "\f00c"; /* FontAwesome Unicode */
-  font-family: FontAwesome;
-  display: inline-block;
-  margin-left: -1.3em; /* same as padding-left set on li */
-  width: 1.3em; /* same as padding-left set on li */
-}
-
 .collaboration li{
   padding-bottom: 10px;
-  list-style-position: inside;
+
+  list-style: inside;
 }
 
 .collaboration a{
-  color: #162777;
 }
 .collaboration a:hover{
   border-radius: 5px;
@@ -104,8 +98,7 @@ img {
   margin-bottom: 70px;
 }
 .research{
-  margin:5%;
-  min-height: 500px;
+  padding: 3%;
 }
 
 .project{
@@ -120,4 +113,25 @@ img {
   margin-right: auto;
   max-width: 35%;
   max-height: 400px;
+}
+.contact_image{
+  float: right;
+  margin-left: 5%;
+  max-width: 100%;
+}
+.contact-section.paralaxy {
+  padding: 100px 0;
+  background-size: cover;
+}
+.flag-div{
+
+}
+.flag{
+  max-width: 40px;
+  margin: 2px;
+  float: right;
+}
+
+.smaller{
+  max-height: 240px;
 }

@@ -54,3 +54,7 @@ def downloads(request):
 
 def contact(request):
     return render(request, "contact.html", {'contact': True})
+
+
+def positions(request):
+    return render(request, "positions.html", {'positions': True})
