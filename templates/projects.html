@@ -1,7 +1,23 @@
 {% extends "base.html" %}
-
-{% block title %}Projects{% endblock %}
-{% block thema %}Projects{% endblock %}
+{% load static %}
 {% block content %}
-projects
+        <div class="logo-inside row text-center d-flex">
+                    {% block logos %}
+        {% endblock %}
+        </div>
+
+
+    <div class="row">
+        <div class="col-7">
+            {% block intro %}{% endblock %}
+        </div>
+        <div class="col-5 text-center border d-flex">
+            {% block image %}{% endblock %}
+        </div>
+
+    {% block description %}{% endblock %}
+    </div>
+    <div class="logo">
+
+    </div>
 {% endblock %}
