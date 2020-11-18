@@ -6,8 +6,9 @@
 
 {% block content %}
     <ul class="downloads">
-    <li><h1 class="m-5">Libraries</h1></li>
-        <div >
+    <li><h1><a type="button" data-toggle="collapse" data-target="#libraries"
+               aria-expanded="false" aria-controls="libraries">Libraries</a></h1></li>
+        <div id="libraries" class="collapse">
         <div class="panel-body">
 
             <p><strong>In order to use these libraries for production of topology and coordinate files to be further used for AMBER simulations do the following in tleap or xleap:</strong></p><br>
@@ -31,7 +32,7 @@
 
 
 
-<div class="panel-body">
+    <div class="panel-body">
             <div class="table-responsive">
                 <table class="table table-hover table-bordered table-striped">
                     <thead>
@@ -559,51 +560,98 @@
     </div>
   </div>
 
-    <li><h1 class="m-5">Scripts/protocols</h1></li>
-    <li><h1 class="m-5">Teaching materials</h1></li>
-    <div class="panel-body">
+    <li><h1><a type="button" data-toggle="collapse" data-target="#protocols"
+               aria-expanded="false" aria-controls="protocols">Scripts/protocols</a></h1></li>
+        <div id="protocols" class="collapse">
+            <p><strong>Docking GAGs with Autodock 3</strong></p>
 
-            <p><strong>Biomolecular modelling: methodology and case studies in computational biology</strong></p><br>
-            <p><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Introduction to the course. Force field. Docking:
-            <a href="{% static 'teaching-matherials/modelling/Lecture-1.pdf' %}">Lecture1</a></p>
-            <p><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Molecular Dynamics (MD):
-            <a href="{% static 'teaching-matherials/modelling/Lecture-2.pdf' %}">Lecture2</a></p>
-            <p><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Solvent in biomolecular modelling:
-            <a href="{% static 'teaching-matherials/modelling/Lecture-3.pdf' %}">Lecture3</a></p>
-            <p><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Protein Folding:
-            <a href="{% static 'teaching-matherials/modelling/Lecture-4.pdf' %}">Lecture4</a></p>
-            <p><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Computational glycobiology:
-            <a href="{% static 'teaching-matherials/modelling/Lecture-5.pdf' %}">Lecture5</a></p>
-            <p><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Basics of QM:
-            <a href="{% static 'teaching-matherials/modelling/Lecture-6.pdf' %}">Lecture6</a></p>
-            <p><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> MD, QM and NMR
-            <a href="{% static 'teaching-matherials/modelling/Lecture-7.pdf' %}">Lecture7</a></p>
+<p>Here are the GAG ligands prepared to be docked by <a href="{% static 'AD3_GAGs.tar.gz' %}">AD3</a>. The charges are assigned with the use of the GLYCAM06-compatible libraries accessible above.
+</p>
+<p>
+Abbreviations:<br>
+HE: heparin (1C4 conformation of IduA(2S))<br>
+DS: dermatan sulfate<br>
+CS: chondroitin sulfate<br>
+HA: hyaluronic acid<br>
+deHE: desulfated heparin (a variant of heparan sulfate)<br>
+pHA: persulfated hyaluronic acid<br>
+dp: degree of polymerization<br>
+octa, hexa, tetra, di: octamers, hexamers, tetramers, dimers<br>
+</p>
+<p>
+The numbers after the GAG abbreviation relate to the sulfation pattern (positions of the sulfates: first numbers correspond to the N-monosaccharide monosaccharide unit, the next ones to  the uronic acid monosaccharide unit; to be sure, check the structures since, for example, HA2 relates to thesulfate in the seond position of the uronic acid monosaccharide unit).
+</p>
+<p>
+In our AD3 protocol we usually obtain 1000 solutions that are further clustered and analyzed. In comparison to the default parameters, the following ones are modified:
+</p>
+<p>
+ga_pop_size 300                      # number of individuals in population<br>
+ga_num_evals 999500000               # maximum number of energy evaluations<br>
+ga_num_generations 10000             # maximum number of generations<br>
+</p>
 
-            <br>
+        </div>
+    <li><h1><a type="button" data-toggle="collapse" data-target="#teaching"
+               aria-expanded="false" aria-controls="teaching">Teaching materials</a></h1></li>
+        <div id="teaching" class="collapse">
+            <div class="panel-body">
+                <p><strong>Biomolecular modelling: methodology and case studies in computational biology</strong></p><br>
 
-            <p><strong> Introduction to Molecular and Cellular Biology</strong></p><br>
-            <p><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Introduction to cell chemistry and biosynthesis:
-            <a href="{% static 'teaching-matherials/biology/Lecture1.pdf' %}">Lecture1</a>,
-            <a href="{% static 'teaching-matherials/biology/Lecture2.pdf' %}">Lecture2</a>,
-            <a href="{% static 'teaching-matherials/biology/Lecture3-4.pdf' %}">Lecture3-4</a>,
-            <a href="{% static 'teaching-matherials/biology/Lecture5-6.pdf' %}>Lecture5-6</a></p>
-            <p><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Cell organization:
-            <a href="{% static 'teaching-matherials/biology/Lecture7-8.pdf' %}">Lecture7-8</a>,
-            <a href="{% static 'teaching-matherials/biology/Lecture9.pdf' %}">Lecture9</a>,
-            <a href="{% static 'teaching-matherials/biology/Lecture10-11.pdf' %}">Lecture10-11</a></p>
-            <p><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Cellular nucleus:
-            <a href="{% static 'teaching-matherials/biology/Lecture12-13.pdf' %}">Lecture12-13</a></p>
-            <p><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Cell membrane:
-            <a href="{% static 'teaching-matherials/biology/Lecture14-16.pdf' %}">Lecture14-16</a></p>
-            <p><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Vesicular transport:
-            <a href="{% static 'teaching-matherials/biology/Lecture17-18.pdf' %}">Lecture17-18</a></p>
-            <p><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Cellular signaling:
-            <a href="{% static 'teaching-matherials/biology/Lecture19-20.pdf' %}">Lecture19-20</a></p>
-            <p><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Cell cycle:
-            <a href="{% static 'teaching-matherials/biology/Lecture21-22.pdf' %}">Lecture21-22</a>,
-            <a href="{% static 'teaching-matherials/biology/Lecture23-24.pdf' %}">Lecture23-24</a></p>
-            <p><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Cell junctions and adhesion:
-            <a href="{% static 'teaching-matherials/biology/Lecture25-26.pdf' %}">Lecture25-26</a></p>
+                <p><a href="{% static 'teaching-matherials/modelling/Lecture-1.pdf' %}">Lecture1</a>
+                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Introduction to the course. Force field. Docking</p>
+                <p><a href="{% static 'teaching-matherials/modelling/Lecture-2.pdf' %}">Lecture2</a>
+                    <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Molecular Dynamics (MD)
+                </p>
+                <p><a href="{% static 'teaching-matherials/modelling/Lecture-3.pdf' %}">Lecture3</a>
+                    <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Solvent in biomolecular modelling
+                </p>
+                <p><a href="{% static 'teaching-matherials/modelling/Lecture-4.pdf' %}">Lecture4</a>
+                    <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Protein Folding
+                </p>
+                <p><a href="{% static 'teaching-matherials/modelling/Lecture-5.pdf' %}">Lecture5</a>
+                    <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Computational glycobiology
+                </p>
+                <p><a href="{% static 'teaching-matherials/modelling/Lecture-6.pdf' %}">Lecture6</a>
+                    <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Basics of QM
+                </p>
+                <p><a href="{% static 'teaching-matherials/modelling/Lecture-7.pdf' %}">Lecture7</a>
+                    <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> MD, QM and NMR
+                </p>
+
+                <br>
+
+                <p><strong> Introduction to Molecular and Cellular Biology</strong></p><br>
+                <p>
+                <a href="{% static 'teaching-matherials/biology/Lecture1.pdf' %}">Lecture1</a>,
+                <a href="{% static 'teaching-matherials/biology/Lecture2.pdf' %}">Lecture2</a>,
+                <a href="{% static 'teaching-matherials/biology/Lecture3-4.pdf' %}">Lecture3-4</a>,
+                <a href="{% static 'teaching-matherials/biology/Lecture5-6.pdf' %}">Lecture5-6</a>
+                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Introduction to cell chemistry and biosynthesis</p>
+                <p>
+                <a href="{% static 'teaching-matherials/biology/Lecture7-8.pdf' %}">Lecture7-8</a>,
+                <a href="{% static 'teaching-matherials/biology/Lecture9.pdf' %}">Lecture9</a>,
+                <a href="{% static 'teaching-matherials/biology/Lecture10-11.pdf' %}">Lecture10-11</a>
+                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Cell organization</p>
+                <p>
+                <a href="{% static 'teaching-matherials/biology/Lecture12-13.pdf' %}">Lecture12-13</a>
+                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Cellular nucleus</p>
+                <p>
+                <a href="{% static 'teaching-matherials/biology/Lecture14-16.pdf' %}">Lecture14-16</a>
+                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Cell membrane</p>
+                <p>
+                <a href="{% static 'teaching-matherials/biology/Lecture17-18.pdf' %}">Lecture17-18</a>
+                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Vesicular transport</p>
+                <p>
+                <a href="{% static 'teaching-matherials/biology/Lecture19-20.pdf' %}">Lecture19-20</a>
+                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Cellular signaling</p>
+                <p>
+                <a href="{% static 'teaching-matherials/biology/Lecture21-22.pdf' %}">Lecture21-22</a>,
+                <a href="{% static 'teaching-matherials/biology/Lecture23-24.pdf' %}">Lecture23-24</a>
+                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Cell cycle</p>
+                <p>
+                <a href="{% static 'teaching-matherials/biology/Lecture25-26.pdf' %}">Lecture25-26</a>
+                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Cell junctions and adhesion</p>
+            </div>
         </div>
     </ul>
 {% endblock %}

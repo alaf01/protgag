@@ -20,10 +20,15 @@ p {
 li{
   font-size: 120%;
 }
+table, th, td {
+  border: 1px solid black;
+  text-align: center;
+}
 img {
   float: right;
   display: inline-block;
   height: auto;
+  align: center;
 }
 .wider{
   max-width: 55%;
@@ -106,6 +111,8 @@ img {
 }
 .downloads li{
   list-style-type: None;
+  margin-bottom: 1%;
+  margin-top: 1%;
 }
 .center {
   display: block;
@@ -123,13 +130,17 @@ img {
   padding: 100px 0;
   background-size: cover;
 }
-.flag-div{
-
-}
-.flag{
+.flag2{
   max-width: 40px;
-  margin: 2px;
-  float: right;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+img.flag{
+  max-width: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .smaller{
@@ -140,7 +151,13 @@ img {
 
 }
 .logo-inside{
-  background-color: #f8f7f1;
+  background-color: #ffffff;
   padding: 10px;
   margin: 10px;
+}
+.card-text{
+  text-align: center;
+}
+.h-100{
+  max-height: 350px;
 }

@@ -1,13 +1,15 @@
-{% extends "base.html" %}
+{% extends "projects.html" %}
 {% load static %}
 {% block title %}SONATA BIS{% endblock %}
 {% block thema %}SONATA BIS{% endblock %}
-{% block content %}
+{% block logos %}
 
-    <h3>Project title:</h3>
+            <div class="col-4 mx-auto my-auto d-block w-100"><img class="" src="{% static 'images/NCN.jpg'%}" alt="EU logo"></div>
 
-    <h2><i><b>    “Modeling of glycosaminoglycan-induced formation of protein structure and enhancement of
-        biologically relevant protein-ligand interactions”
+{% endblock %}
+{% block intro %}
+    <h2><i><b>    Modeling of glycosaminoglycan-induced formation of protein structure and enhancement of
+        biologically relevant protein-ligand interactions
 </b></i></h2>
     <hr>
 <ul>
@@ -17,6 +19,11 @@
     <li>Project Leader: Sergey Samsonov</li>
     <li><a href="https://projekty.ncn.gov.pl/index.php?projekt_id=418479">Link to project description on NCN (Narodowe Centrum Nauki)</a></li>
 </ul>
+{% endblock %}
+{% block image %}
+        <img class="mx-auto my-auto d-block h-100" src="{% static "images/sonata2.png" %}" alt="preludium">
+{% endblock %}
+{% block description %}
 <p>
     <button class="btn btn-secondary btn-lg" type="button" data-toggle="collapse" data-target="#abstract"
             aria-expanded="false" aria-controls="abstract"><b>Abstract</b></button>

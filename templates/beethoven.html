@@ -1,10 +1,14 @@
-{% extends "base.html" %}
+{% extends "projects.html" %}
 {% load static %}
 {% block title %}BEETHOVEN CLASSIC{% endblock %}
 {% block thema %}BEETHOVEN CLASSIC{% endblock %}
-{% block content %}
-    <h3>Project title:</h3>
-    <h2><i><b>“Mechanistic insights into the specificity of glycosaminoglycan interactions with regulatory proteins”</b></i></h2>
+{% block logos %}
+
+    <div class="col-4 mx-auto my-auto d-block w-100"><img class="" src="{% static 'images/NCN.jpg'%}" alt="EU logo"></div>
+    <div class="col-4 mx-auto my-auto d-block w-100"><img class="" src="{% static 'images/DFG.jpg'%}" alt="EU logo"></div>
+{% endblock %}
+{% block intro %}
+    <h2><i><b>Mechanistic insights into the specificity of glycosaminoglycan interactions with regulatory proteins</b></i></h2>
     <hr>
 <ul>
     <li>Funding Programme: BEETHOVEN CLASSIC from National Science Centre (Poland) and German Research Council</li>
@@ -13,6 +17,11 @@
     <li>Project Leader: Sergey Samsonov</li>
     <li><a href="https://www.ncn.gov.pl/konkursy/wyniki/2019-10-15-beethoven3?language=en">Link to project description on NCN (Narodowe Centrum Nauki)</a></li>
 </ul>
+{% endblock %}
+{% block image %}
+        <img class="mx-auto my-auto d-block w-100" src="{% static "images/beethoven.png" %}" alt="preludium">
+{% endblock %}
+{% block description %}
 <p>
     <button class="btn btn-secondary btn-lg" type="button" data-toggle="collapse" data-target="#abstract"
             aria-expanded="false" aria-controls="abstract"><b>Abstract</b></button>
