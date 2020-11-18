@@ -19,7 +19,7 @@
             <p><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Now you can either use sequence command to build your GAG: new_unit=sequence { … LIB …}</p>
             <p><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Or you can read the data from the pdb, where the residues are already renamed to be compatible with the nomenclature of the libraries:new_unit=loadpdb my_pdb_which_includes_residue_LIB.pdb </p>
             <br>
-            <p><strong>Be careful Ido2UA residues:</strong>if you want to build a heparin molecule or a molecule, which contains Ido2UA, pay attention to the fact that this residue rather exists in <sup>1</sup>C<sub>4</sub>and <sup>2</sup>S<sub>0</sub> conformations. In our libraries, however, <strong>ALL</strong> the residues are in <sup>4</sup>C<sub>1</sub> conformation. Therefore, <strong>DO NOT</strong> use sequence command to build your GAG. Instead you can use these two prepared files with heparin dp10 with Ido2SUA in <sup>1</sup>C<sub>4</sub> and <sup>2</sup>S<sub>0</sub> conformations and read them by loadpdb command. These structures originate from the experimental structure (PDB ID: 1HPN) and contain already renamed residues/atoms to be compatible with our libraries. If you use an experimental structure of a protein complex with heparin, just rename the residues according to the nomenclature in our libraries and read them in. The same applies to the residues, for which you know that their conformations are not <sup>4</sup>C<sub>1</sub>.</p>
+            <p><strong>Be careful Ido2UA residues: </strong>if you want to build a heparin molecule or a molecule, which contains Ido2UA, pay attention to the fact that this residue rather exists in <sup>1</sup>C<sub>4</sub> and <sup>2</sup>S<sub>0</sub> conformations. In our libraries, however, <strong>ALL</strong> the residues are in <sup>4</sup>C<sub>1</sub> conformation. Therefore, <strong>DO NOT</strong> use sequence command to build your GAG. Instead you can use these two prepared files with heparin dp10 with Ido2SUA in <sup>1</sup>C<sub>4</sub> and <sup>2</sup>S<sub>0</sub> conformations and read them by loadpdb command. These structures originate from the experimental structure (PDB ID: 1HPN) and contain already renamed residues/atoms to be compatible with our libraries. If you use an experimental structure of a protein complex with heparin, just rename the residues according to the nomenclature in our libraries and read them in. The same applies to the residues, for which you know that their conformations are not <sup>4</sup>C<sub>1</sub>.</p>
             <br>
             <p>1. Case DA, Berryman JT, Betz RM, Cerutti DS, Cheatham TE, Darden TA, Duke RE, Giese TJ, Gohlke H, Goetz AW, Homeyer N, Izadi S, Janowski P, Kaus J, Kovalenko A, Lee TS, LeGrand S, Li P, Luchko T, Luo R, Madej B, Merz KM, Monard G, Needham P, Nguyen H, Nguyen HT, Omelyan I, Onufriev A, Roe DR, Roitberg A, Salomon-Ferrer R, Simmerling CL, Smith W, Swails J, Walker RC, Wang J, Wolf RM, Wu X, York DM, Kollman PA. AMBER 14. San Francisco: University of California; 2015.</p>
 
@@ -565,11 +565,11 @@
         <div id="protocols" class="collapse">
             <p><strong>Docking GAGs with Autodock 3</strong></p>
 
-<p>Here are the GAG ligands prepared to be docked by <a href="{% static 'AD3_GAGs.tar.gz' %}">AD3</a>. The charges are assigned with the use of the GLYCAM06-compatible libraries accessible above.
+<p><a href="{% static 'AD3_GAGs.tar.gz' %}">Here</a> are the GAG ligands prepared to be docked by AD3. The charges are assigned with the use of the GLYCAM06-compatible libraries accessible above.
 </p>
 <p>
 Abbreviations:<br>
-HE: heparin (1C4 conformation of IduA(2S))<br>
+HE: heparin (<sup>1</sup>C<sub>4</sub> conformation of IduA(<sup>2</sup>S<sub>O</sub>))<br>
 DS: dermatan sulfate<br>
 CS: chondroitin sulfate<br>
 HA: hyaluronic acid<br>
@@ -598,24 +598,24 @@ ga_num_generations 10000             # maximum number of generations<br>
                 <p><strong>Biomolecular modelling: methodology and case studies in computational biology</strong></p><br>
 
                 <p><a href="{% static 'teaching-matherials/modelling/Lecture-1.pdf' %}">Lecture1</a>
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Introduction to the course. Force field. Docking</p>
+                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Introduction to the course. Force field. Docking.</p>
                 <p><a href="{% static 'teaching-matherials/modelling/Lecture-2.pdf' %}">Lecture2</a>
-                    <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Molecular Dynamics (MD)
+                    <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Molecular dynamics (MD).
                 </p>
                 <p><a href="{% static 'teaching-matherials/modelling/Lecture-3.pdf' %}">Lecture3</a>
-                    <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Solvent in biomolecular modelling
+                    <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Solvent in biomolecular modelling.
                 </p>
                 <p><a href="{% static 'teaching-matherials/modelling/Lecture-4.pdf' %}">Lecture4</a>
-                    <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Protein Folding
+                    <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Protein folding.
                 </p>
                 <p><a href="{% static 'teaching-matherials/modelling/Lecture-5.pdf' %}">Lecture5</a>
-                    <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Computational glycobiology
+                    <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Computational glycobiology.
                 </p>
                 <p><a href="{% static 'teaching-matherials/modelling/Lecture-6.pdf' %}">Lecture6</a>
-                    <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Basics of QM
+                    <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Basics of QM.
                 </p>
                 <p><a href="{% static 'teaching-matherials/modelling/Lecture-7.pdf' %}">Lecture7</a>
-                    <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> MD, QM and NMR
+                    <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> MD, QM and NMR.
                 </p>
 
                 <br>
@@ -626,31 +626,31 @@ ga_num_generations 10000             # maximum number of generations<br>
                 <a href="{% static 'teaching-matherials/biology/Lecture2.pdf' %}">Lecture2</a>,
                 <a href="{% static 'teaching-matherials/biology/Lecture3-4.pdf' %}">Lecture3-4</a>,
                 <a href="{% static 'teaching-matherials/biology/Lecture5-6.pdf' %}">Lecture5-6</a>
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Introduction to cell chemistry and biosynthesis</p>
+                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Introduction to cell chemistry and biosynthesis.</p>
                 <p>
                 <a href="{% static 'teaching-matherials/biology/Lecture7-8.pdf' %}">Lecture7-8</a>,
                 <a href="{% static 'teaching-matherials/biology/Lecture9.pdf' %}">Lecture9</a>,
                 <a href="{% static 'teaching-matherials/biology/Lecture10-11.pdf' %}">Lecture10-11</a>
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Cell organization</p>
+                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Cell organization.</p>
                 <p>
                 <a href="{% static 'teaching-matherials/biology/Lecture12-13.pdf' %}">Lecture12-13</a>
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Cellular nucleus</p>
+                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Cellular nucleus.</p>
                 <p>
-                <a href="{% static 'teaching-matherials/biology/Lecture14-16.pdf' %}">Lecture14-16</a>
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Cell membrane</p>
+                <a href="{% static 'teaching-matherials/biology/Lecture14-16.pdf' %}">Lecture14-16.</a>
+                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Cell membrane.</p>
                 <p>
                 <a href="{% static 'teaching-matherials/biology/Lecture17-18.pdf' %}">Lecture17-18</a>
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Vesicular transport</p>
+                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Vesicular transport.</p>
                 <p>
                 <a href="{% static 'teaching-matherials/biology/Lecture19-20.pdf' %}">Lecture19-20</a>
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Cellular signaling</p>
+                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Cellular signaling.</p>
                 <p>
                 <a href="{% static 'teaching-matherials/biology/Lecture21-22.pdf' %}">Lecture21-22</a>,
                 <a href="{% static 'teaching-matherials/biology/Lecture23-24.pdf' %}">Lecture23-24</a>
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Cell cycle</p>
+                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Cell cycle.</p>
                 <p>
                 <a href="{% static 'teaching-matherials/biology/Lecture25-26.pdf' %}">Lecture25-26</a>
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Cell junctions and adhesion</p>
+                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Cell junctions and adhesion.</p>
             </div>
         </div>
     </ul>
