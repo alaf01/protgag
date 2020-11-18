@@ -21,8 +21,8 @@ li{
   font-size: 120%;
 }
 table, th, td {
-  border: 1px solid black;
-  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 img {
   float: right;
@@ -141,6 +141,8 @@ img.flag{
   max-width: 40px;
   margin-left: 20px;
   margin-right: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .smaller{
