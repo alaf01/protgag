@@ -43,17 +43,13 @@ img {
 .inside{
   padding-left: 10%;
   padding-right: 10%;
-  font-size: 1.2em;
   color: #162777;
   text-align: justify;
   text-justify: inter-word;
 }
-.inside p{
-  font-size: 1.4em;
-}
 
 .contact{
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .intro{
