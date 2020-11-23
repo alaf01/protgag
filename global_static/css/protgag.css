@@ -1,4 +1,44 @@
 {% load static %}
+
+@media screen and (min-width: 901px) {
+  .intro h1 {
+  line-height: 1.5;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 4em;
+}
+  .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 25%;
+  max-height: 400px;
+}
+  .wider{
+  max-width: 45%;
+}
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 900px) {
+  .intro h1 {
+  line-height: 1.5;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 2em;
+}
+  .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 35%;
+  max-height: 400px;
+}
+  .wider{
+  max-width: 55%;
+}
+}
+
 body {
   background-color: #f8f7f1;
 }
@@ -31,9 +71,6 @@ img {
   height: auto;
   align: center;
 }
-.wider{
-  max-width: 55%;
-}
 .home{
   padding: 20px;
   padding-left: 50px;
@@ -59,14 +96,6 @@ img {
   line-height: 150px;
   height: 150px;
   text-align: center;
-}
-
-.intro h1 {
-  line-height: 1.5;
-  display: inline-block;
-  vertical-align: middle;
-  text-shadow: 1px 1px 2px ;
-  font-size: 4em;
 }
 
 .team_paper {
@@ -101,6 +130,7 @@ img {
 }
 .research{
   padding: 3%;
+  overflow: hidden;
 }
 
 .project{
@@ -111,13 +141,7 @@ img {
   margin-bottom: 1%;
   margin-top: 1%;
 }
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 35%;
-  max-height: 400px;
-}
+
 .contact_image{
   float: right;
   margin-left: 5%;
