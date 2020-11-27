@@ -17,3 +17,12 @@ class News(models.Model):
 
     class Meta:
         verbose_name_plural = 'news'
+
+
+class Research(models.Model):
+    title = models.CharField(max_length=200)
+    description = models.TextField()
+    image = models.ImageField(upload_to='staticfiles')
+
+    class Meta:
+        verbose_name_plural = 'researches'

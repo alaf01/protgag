@@ -5,8 +5,9 @@
 {% block thema %}Collaborations{% endblock %}
 
 {% block content %}
-
-<table>
+<div class="row">
+<div class="col-lg-7 d-flex align-items-center">
+<table class="table">
   <tr>
     <td><img class="flag" src="{% static 'flag/pl.png' %}"></td>
     <td><a href="https://liwo.strony.ug.edu.pl/">
@@ -60,7 +61,7 @@
   </tr>
   <tr>
     <td><img class="flag" src="{% static 'flag/ru.png' %}"></td>
-    <td><a href="https://photonic.itmo.ru/en/viewperson/204347/puchkova-liudmila-valentinovna.htm">
+    <td><a href="https://phnt.spbstu.ru/person/puchkova_ludmila_valentinovna/">
             Ludmila Puchkova</a>, Peter the Great St. Petersburg Polytechnic University, Russia</td>
   </tr>
   <tr>
@@ -75,4 +76,9 @@
 
   </tr>
 </table>
+    </div>
+    <div class="col-lg-5 d-flex justify-content-center">
+    <img class="img-map" src="{% static 'images/maps_new.png' %}"></td>
+    </div>
+</div>
 {% endblock %}
