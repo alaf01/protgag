@@ -4,12 +4,12 @@
 {% block thema %}Research{% endblock %}
 {% block content %}
 
-
+    
     <div class="research">
         <h2>Glycosaminoglycans (GAGs)</h2>
         <hr>
-<div class="row"><div class="col-4"> <img class="float-sm-right m-3 center  d-flex align-items-center" src="{% static 'images/GAG_scheme1.png' %}" alt="">
-        <p div class="col-8"><b>Glycosaminoglycans (GAGs)</b> are linear periodic anionic polysaccharides playing a key role in the
+<img class="float-sm-right m-3 center  d-flex align-items-center" src="{% static 'images/GAG_scheme1.png' %}" alt="">
+        <p><b>Glycosaminoglycans (GAGs)</b> are linear periodic anionic polysaccharides playing a key role in the
         extracellular matrix via interactions with a manifold of proteins such as growth factors and chemokines and so
         representing promising targets in artificial matrix engineering for potential applications in regenerative
         medicine.
@@ -22,12 +22,12 @@
         the development of GAG-specific computational approaches. Many ongoing projects in the group are
             carried out within collaborations <a href="{% url 'collaborations' %}">
                 with other experimental and theoretical groups</a>.</p>
-    </div></div></div>
+    </div>
 
     <div class="research">
         <h2>Proteins-GAG interactions</h2>
         <hr>
-        <div class="row"><div class="col-4"> <img class="float-sm-left m-3 center" src="{% static 'images/protein_gag.png' %}" alt="">
+        <div class="col-4"> <img class="float-sm-left m-3 center" src="{% static 'images/protein_gag.png' %}" alt="">
         <p div class="col-8">GAGs are able to bind numerous proteins in the extracellular matrix and so
         modulate their activity. However, often the application of the experimental techniques alone does not
         allow to decipher the molecular mechanisms underlying these GAG-driven processes. We have
@@ -94,8 +94,8 @@ ions.</p>
     <h2>Specificity of GAG interactions</h2>
     <hr>
 
- <div class="row"><div class="col-4"> <img class="float-sm-left m-3 center" src="{% static 'images/spec2.png' %}" alt="">
-<p div class="col-8">Among many challenges in GAG modeling, there is one question
+ <div class="row"><div class="col-4"> <img class="float-sm-left m-3" src="{% static 'images/spec2.png' %}" alt=""></div>
+<p class="col-8">Among many challenges in GAG modeling, there is one question
 which is central in the field that remains unanswered:
     how specific are protein-GAG interactions? For several protein-GAG systems, it was shown that the alterations in the GAG type and
 sulfation pattern changes their protein binding capabilities specifically, whereas for others, it is
@@ -112,7 +112,7 @@ other biomacromolecules.</p>
     <h2>Coarse-grained modeling of GAG-containing systems</h2>
     <hr>
 <div class="row">
-    <div class="col-4"> <img class="float-sm-right m-3 wider" src="{% static 'images/cg.png' %}" alt=""></div>
+    <div class="col-4"> <img class="float-sm-right m-3" src="{% static 'images/cg.png' %}" alt=""></div>
 <p class="col-8">Many biologically relevant processes involving
 GAGs require modeling at time and distance scales essentially longer than the ones accessible by
 classical all atomic modeling. In these lines, the coarse-grained approach can bring essentially new type
@@ -128,7 +128,7 @@ steered by the molecular interactions with GAGs within complex and versatile mul
      <h2>Methodological aspects of GAG modeling and new tools development</h2>
     <hr>
 <div class="row">
-    <div class="col-4"> <img class="float-sm-left m-5 wider" src="{% static 'images/methods2.png' %}" alt=""></div>
+    <div class="col-4"> <img class="float-sm-left m-5" src="{% static 'images/methods2.png' %}" alt=""></div>
     <p class="col-8">
         More and more modeling
     approaches with the improved capabilities to treat GAG-containing systems have been appearing in the
@@ -140,5 +140,5 @@ steered by the molecular interactions with GAGs within complex and versatile mul
     these systems.
     </p>
     </div>
-</div>
+</div></div>
 {% endblock %}
