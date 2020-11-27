@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Article, News, Research
+from .models import Article, News
 
 
 @admin.register(Article)
@@ -11,8 +11,3 @@ class TeamAdmin(admin.ModelAdmin):
 @admin.register(News)
 class TeamAdmin(admin.ModelAdmin):
     list_display = ('title', 'description')
-
-
-@admin.register(Research)
-class TeamAdmin(admin.ModelAdmin):
-    list_display = ('title', 'description', 'image')

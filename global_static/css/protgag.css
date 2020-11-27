@@ -72,6 +72,9 @@ img {
   max-width: 80%;
   height: auto;
 }
+.img-map:hover{
+   max-width: 120%;
+}
 .home{
   padding: 20px;
   padding-left: 50px;
