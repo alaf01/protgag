@@ -17,3 +17,15 @@ class News(models.Model):
 
     class Meta:
         verbose_name_plural = 'news'
+
+
+class Member(models.Model):
+    name = models.CharField(max_length=40)
+    surname = models.CharField(max_length=40)
+    position = models.CharField(max_length=100)
+    description = models.TextField()
+    image = models.ImageField(upload_to='members')
+    queue = models.PositiveIntegerField(default=0)
+
+
+
