@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Article, News
+from .models import Article, News, Member
 
 
 def home(request):
@@ -41,7 +41,8 @@ def publications(request):
 
 
 def members(request):
-    return render(request, "members.html", {'members': True})
+    team = Member.objects.all().order_by('queue')
+    return render(request, "members.html", {'members': True, 'team': team})
 
 
 def collaborations(request):

@@ -108,9 +108,15 @@ img {
   color: #000000;
 }
 
-.member {
+.member img {
+  max-height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
-
+.member h4{
+  text-align: center;
+}
 .collaboration li{
   padding-bottom: 10px;
 

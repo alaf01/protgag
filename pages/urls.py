@@ -1,4 +1,7 @@
+from django.conf.urls.static import static
 from django.urls import path
+
+from protgag import settings
 from . import views
 
 urlpatterns = [
@@ -16,4 +19,4 @@ urlpatterns = [
     path('downloads/', views.downloads, name="downloads"),
     path('positions/', views.positions, name="positions"),
     path('contact/', views.contact, name="contact"),
-    ]
+    ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

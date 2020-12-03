@@ -9,6 +9,8 @@ class Article(models.Model):
     rest = models.CharField(max_length=400, blank=True)
     doi = models.URLField(blank=True)
 
+    def __str__(self):
+        return '{}-{}-{}'.format(self.__class__.__name__, self.journal, self.year)
 
 class News(models.Model):
     title = models.CharField(max_length=200)
@@ -18,14 +20,18 @@ class News(models.Model):
     class Meta:
         verbose_name_plural = 'news'
 
+    def __str__(self):
+        return '{}-{}'.format(self.__class__.__name__, self.title)
 
 class Member(models.Model):
     name = models.CharField(max_length=40)
-    surname = models.CharField(max_length=40)
     position = models.CharField(max_length=100)
     description = models.TextField()
     image = models.ImageField(upload_to='members')
     queue = models.PositiveIntegerField(default=0)
+    cv = models.FileField(upload_to='members', blank=True)
 
+    def __str__(self):
+        return '{}-{}'.format(self.__class__.__name__, self.name)
 
 
