@@ -230,3 +230,7 @@ div {
   display: table-cell;
   vertical-align: middle;
 }
+.blue{
+  background-color: #6887e5;
+  border-radius: 10px;
+}

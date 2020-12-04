@@ -30,25 +30,25 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
               <a class="navbar-brand" href="{% url 'home' %}">
-                <img src="{% static 'images/Gag-comp3.png' %}" width="30" height="30" alt="" loading="lazy">
+                <img src="{% static 'images/Gag-comp3.png' %}" width="100" alt="" loading="lazy">
               </a>
             <ul class="navbar-nav justify-content-end">
-              <li class="nav-item {% if  home %} active {% endif %}">
+              <li class="nav-item {% if  home %} active blue{% endif %}">
                 <a class="nav-link" href="{% url 'home' %}">
                     Start Page <span class="sr-only">(current)</span>
                 </a>
               </li>
-              <li class="nav-item {% if news  %} active {% endif %}">
+              <li class="nav-item {% if news  %} active blue{% endif %}">
                 <a class="nav-link" href="{% url 'news' %}">
                     News
                 </a>
               </li>
-              <li class="nav-item {% if research  %} active {% endif %}">
+              <li class="nav-item {% if research  %} active blue{% endif %}">
                 <a class="nav-link" href="{% url 'research' %}">
                     Research
                 </a>
               </li>
-              <li class="nav-item dropdown {% if projects or polonez or preludium %} active {% endif %}">
+              <li class="nav-item dropdown {% if projects or polonez or preludium %} active blue{% endif %}">
                 <a class="nav-link dropdown-toggle" href="{% url 'projects' %}" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Projects
                 </a>
@@ -59,32 +59,32 @@
                   <a class="dropdown-item" href="{% url 'preludium' %}">PRELUDIUM</a>
                 </div>
               </li>
-              <li class="nav-item {% if publications  %} active {% endif %}">
+              <li class="nav-item {% if publications  %} active blue{% endif %}">
                 <a class="nav-link" href="{% url 'publications' %}">
                     Publications
                 </a>
               </li>
-              <li class="nav-item {% if members  %} active {% endif %}">
+              <li class="nav-item {% if members  %} active blue{% endif %}">
                 <a class="nav-link" href="{% url 'members' %}">
                     Group Members
                 </a>
               </li>
-              <li class="nav-item {% if collaborations  %} active {% endif %}">
+              <li class="nav-item {% if collaborations  %} active blue{% endif %}">
                 <a class="nav-link" href="{% url 'collaborations' %}">
                     Collaborations
                 </a>
               </li>
-              <li class="nav-item {% if downloads  %} active {% endif %}">
+              <li class="nav-item {% if downloads  %} active blue{% endif %}">
                 <a class="nav-link" href="{% url 'downloads' %}">
                     Downloads
                 </a>
               </li>
-                <li class="nav-item {% if positions  %} active {% endif %}">
+                <li class="nav-item {% if positions  %} active blue{% endif %}">
                 <a class="nav-link" href="{% url 'positions' %}">
                     Open Positions
                 </a>
               </li>
-              <li class="nav-item {% if contact  %} active {% endif %}">
+              <li class="nav-item {% if contact  %} active blue{% endif %}">
                 <a class="nav-link" href="{% url 'contact' %}">
                     Contact
                 </a>
