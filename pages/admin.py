@@ -8,9 +8,5 @@ class TeamAdmin(admin.ModelAdmin):
     search_fields = ('year', 'journal')
 
 
-@admin.register(News)
-class TeamAdmin(admin.ModelAdmin):
-    list_display = ('title', 'description')
-
-
+admin.site.register(News)
 admin.site.register(Member)
