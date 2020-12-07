@@ -132,6 +132,5 @@ CLOUDINARY_STORAGE = {
     'API_KEY': '625139385338135',
     'API_SECRET': 'mCK6lCTSFoZ4WISdkLIgk4pwCnw',
 }
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 django_heroku.settings(locals())
