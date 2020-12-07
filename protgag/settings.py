@@ -36,8 +36,10 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'cloudinary_storage',
     'django.contrib.staticfiles',
     'pages',
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
@@ -124,5 +126,12 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'global_static')]
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'hrg6bpepc',
+    'API_KEY': '625139385338135',
+    'API_SECRET': 'mCK6lCTSFoZ4WISdkLIgk4pwCnw',
+}
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 django_heroku.settings(locals())
