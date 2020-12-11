@@ -4,20 +4,81 @@
 {% block thema %}Team Members{% endblock %}
 {% block content %}
 
-    {% for member in team %}
+
     <div class="member">
         <div class="row">
-            <div class="col-4"><img src="{{ member.image.url }}" alt=""></div>
+            <div class="col-4"><img src="{% static 'images/members/Sergey.jpg' %}" alt="Sergey Samsonov"></div>
             <div class="col-8">
-                <h2>{{ member.name }} {{ member.surname }}</h2>
-                <h4>{{ member.position}}</h4>
-                <p>{{ member.description |safe}}</p>
-                <h4><a href="{{ member.cv.url }}" class="btn btn-outline-primary">cv</a></h4>
+                <h2>Sergey Samsonov</h2>
+                <h4>Group Leader</h4>
+                <p>Sergey Samsonov graduated in Biophysics at Peter the Great St. Petersburg Polytechnic             University (Russia) in 2006. In his MSc Thesis he applied experimental and computational methodology to             characterize a potential copper transporter. He obtained his first             <a href="https://tud.qucosa.de/landing-page/?tx_dlf[id]=https%3A%2F%2Ftud.qucosa.de%2Fapi%2Fqucosa%253A25146%2Fmets">PhD</a>             in 2009 in Bioinformatics at Dresden University of Technology in the group of Structural Bioinformatics under             the supervision of Dr. M. Teresa Pisabarro, where he investigated the impact of solvent and effects of             fluorination in protein-protein interactions. In 2010 he obtained his second PhD title in the field of             Biochemistry at St. Petersburg University for the continuation of his Master Thesis topic on copper             metabolism proteins. Since then and until 2017 he was a postdoctoral researcher in the group of Structural             Bioinformatics at Dresden University of Technology within the project             <a href="https://research.uni-leipzig.de/trr67/en/home/">“Transregio 67: Functional biomaterials             for controlling healing processes in bone and skin tissue – from material to clinic”</a>, where he started             to work in the field of modeling             GAG containing biomolecular systems. In 2017 he received a joint grant from National Centre of Sciences             (Poland) and EU Commission within <a href="https://ncn.gov.pl/polonez?language=en">POLONEZ Programme</a> to start his             own research group at the University of Gdańsk. In 2018 he obtained the title of dr hab. at the University             of Tours (France) (Habilitation à diriger des recherches). In 2019, he received two new grants from National             Centre of Sciences (Poland), one of which is within collaborative Programme with German Research Council,             both of which represent extension of his GAG modeling studies. His research interests are in approaching             the understanding of various aspects of GAG interactions with other biomacromolecules and development of             specific methodology for this class of polysaccharides with the assistance of molecular docking,           molecular dynamics, free energy calculations and quantum chemistry approaches.</p>
+                <h4><a href="{% static 'cv/CV_Sergey.pdf' %}" class="btn btn-outline-primary">cv</a></h4>
             </div>
         </div>
     </div>
         <hr>
-    {% endfor %}
+    <div class="member">
+        <div class="row">
+            <div class="col-4"><img src="{% static 'images/members/Martyna.jpg' %}" alt="Martyna Maszota-Zieleniak"></div>
+            <div class="col-8">
+                <h2>Martyna Maszota-Zieleniak</h2>
+                <h4>Postdoctoral Researcher</h4>
+                <p>Martyna Maszota-Zieleniak graduated in Environmental Science at Faculty of Chemistry, University of Gdańsk in 2008. In her MSc Thesis she used NMR approaches as well as molecular dynamics simulations to characterize the structure of the Aβ peptide. She completed her PhD in 2017 in Chemistry at Faculty of Chemistry, University of Gdańsk in the Laboratory of Medicinal Chemistry under the supervision of dr hab. Sylwia Rodziewicz-Motowidło. The aim of her doctoral dissertation was to supplement the current state of knowledge about structure and interactions between amyloid proteins. She used 1-,2- and 3-D NMR techniques, molecular dynamics calculations in AMBER and structure predictions on the basis of amino acid sequences. During her PhD studies she was working in three independent projects: “Solution NMR investigations of human cystatin C - structure, dynamics and protein-ligand interactions (head of the project)”; “Molecular characteristics of the human cystatin C complex with natural auto-antibodies” (co-investigator); “Design of BTLA protein inhibitors as new anti-melanoma drugs” (co-investigator). She also completed an internship at the National Institute of Chemistry, Slovenian NMR Centre, Ljubljana, Slovenia (2011).
+
+</p>
+                <h4><a href="{% static 'cv/CV_Martyna.pdf' %}" class="btn btn-outline-primary">cv</a></h4>
+            </div>
+        </div>
+    </div>
+        <hr>
+        <div class="member">
+        <div class="row">
+            <div class="col-4"><img src="{% static 'images/members/Krzys.jpg' %}" alt="Krzysztof Bojarski"></div>
+            <div class="col-8">
+                <h2>Krzysztof Bojarski</h2>
+                <h4>PhD student</h4>
+                <p>Krzysztof Bojarski is PhD student since 2017. In his research, Krzysztof studies various aspects of interactions in protein-glycosaminoglycan systems. Krzysztof defended his Bachelor Degree in 2015 at the Department of Organic Chemistry and Master Degree in 2017 at the Department of Theoretical Chemistry, in which he’s conductsing his PhD studies. During his Master studies, Krzysztof characterised the effect of restraint type and strength on the quality of protein models obtained with homology-restrained UNRES simulations. Currently Krzysztof is a principal investigator in his own grant within PRELUDIUM Programme from National Centre of Sciences (Poland). With his current study Krzysztof aims to elucidate the role of glycosaminoglycans in the process of procathepsin maturation. Within the frame of this work he conducted a study that allowed him to propose a mechanism of procathepsin B maturation in a presence of glycosaminoglycans. In his study Krzysztof Bojarski employs various molecular modeling methods such as molecular docking, molecular dynamics (all-atom and coarse-grained) and free energy calculations. During his Bachelor course Krzysztof Bojarski completed an internship in group of Prof. Anders Grubb at the University of Lund. He performed various experiments including SDS-PAGE, HPLC and GC to characterise Cystatin C. During his PhD Krzysztof Bojarski counducted an internship in the group of Dr Lecaile at the University of Tours, one of our collaborators. He performed spectrofluorometric analysis to measure specific protease activity with fluorogenic assays.</p>
+                <h4><a href="{% static 'cv/CV_Krzysztof.pdf' %}" class="btn btn-outline-primary">cv</a></h4>
+            </div>
+        </div>
+    </div>
+        <hr>
+        <div class="member">
+        <div class="row">
+            <div class="col-4"><img src="{% static 'images/members/Mateusz.jpg' %}" alt="Mateusz Marcisz"></div>
+            <div class="col-8">
+                <h2>Mateusz Marcisz</h2>
+                <h4>PhD Student</h4>
+                <p>Mateusz Marcisz has graduated from the Univeristy of Wrocław in 2018. His laboratory work on his Master Thesis titled “Expression and purification of RAD50 Zink Hook domain fragments” focused on protein expression for crystallography and NMR. He used various techniques such as circular dichroism, fluorymetry, mass spectrometry, peptide synthesis, spectroscopy, chromatography. In 2017 he qualified to a Visiting Research Graduate Traineeship Program, an internship organized by University of Virginia and Fulbright. During this internship he focused on Electron Microscopy (Negative Stain Microscopy and CryoEM). After a year of the internship in Virginia he stayed there as a Lab Specialist for additional half a year. In 2019 he came back to Poland to start his PhD on University of Gdańsk where he joined Samsonov’s group.</p>
+                <h4><a href="{% static 'cv/CV_Mateusz.pdf' %}" class="btn btn-outline-primary">cv</a></h4>
+            </div>
+        </div>
+    </div>
+        <hr>
+        <div class="member">
+        <div class="row">
+            <div class="col-4"><img src="{% static 'images/members/Malgosia.jpg' %}" alt="Małgorzata Kogut"></div>
+            <div class="col-8">
+                <h2>Małgorzata Kogut</h2>
+                <h4>PhD Student</h4>
+                <p>Małgorzata is a PhD student since April 2020. She completed a 5-year course of studies in Chemistry with an in-depth specialization in nanotechnology at Heriot-Watt University (Edinburgh, UK) and graduated in May 2018. Her Master Thesis was carried out in the Nano Safety Research Group at the Institute for Chemical Biology, Biophysics and Bioengineering. It was centred around the toxicity of various nanomaterials (ZnO, Ag) on a neutrophil cell-line (HL-60) and the phagocytic ability of the cells. These findings were compared with primary blood neutrophils which were separated from human blood samples. The work comprised of the extensive use of tissue culture techniques (including set up and cell differentiation), microscopy, working under sterile conditions, handling nanomaterials and using fluorescence-photometric approaches. In August 2018, she joined the International Centre for Cancer Vaccine Science in Gdańsk where she was working on the topic: “Blocking the TNF-TNFR2 interactions as a novel approach to the ovarian carcinoma treatment”. The main goal of the project was to design, synthesize and characterize peptides and peptidomimetics to block interactions between aforementioned proteins. She also completed two internships: in Helmholtz-Centre for Environmental Research – UFZ Leipzig, Germany (2016) and in Leibniz Institute for Freshwater Ecology and Inland Fishery, Berlin, Germany (2016).</p>
+                <h4><a href="{% static 'cv/CV_Malgorzata.pdf' %}" class="btn btn-outline-primary">cv</a></h4>
+            </div>
+        </div>
+    </div>
+        <hr>
+        <div class="member">
+        <div class="row">
+            <div class="col-4"><img src="{% static 'images/members/AnneMarie.jpg' %}" alt="Annemarie Danielsson"></div>
+            <div class="col-8">
+                <h2>Annemarie Danielsson</h2>
+                <h4>PhD Student</h4>
+                <p>Annemarie is a PhD student at the Laboratory of Molecular Modeling, tasked with the investigation of the specificity of protein-glycosaminoglycan binding using computational approaches alongside participating in the development of these methods. She completed her Bachelor Degree in Bioinformatics at the University of Gdansk and in her Bachelor Thesis examined the influence of the optimization of energy function parameters on the quality of modeling of amino acid side chain interactions obtained using the coarse-grained force field UNRES. Annemarie finished her Master Degree in Bioinformatics in Munich at the Technical University of Munich and the Ludwig-Maximilians University; her Master Thesis was focused on the computational analysis of changes in DNA methylation during pregnancy and postpartum in women with and without exposure to early life stress.</p>
+                <h4><a href="{% static 'cv/CV_Annemarie.pdf' %}" class="btn btn-outline-primary">cv</a></h4>
+            </div>
+        </div>
+    </div>
+        <hr>
 
 <div class="m-5">
 <h1>Former Members:</h1>
