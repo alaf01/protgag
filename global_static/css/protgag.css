@@ -4,8 +4,6 @@
   .inside {
   padding-left: 10%;
   padding-right: 10%;
-  font-size: x-large;
-
 }
   .intro h1 {
   line-height: 1.5;
@@ -28,12 +26,12 @@
   font-size: 3rem;
   }
   .nav-item{
-  font-size: x-large;
+  font-size: xx-large;
   }
   .inside {
   padding-left: 5%;
   padding-right: 5%;
-  font-size: x-large;
+  font-size: xx-large;
 }
   .intro h1 {
   line-height: 1.5;
@@ -48,7 +46,6 @@
   max-width: 35%;
   max-height: 400px;
 }
-
 }
 body {
   background-color: #f8f7f1;
@@ -143,7 +140,7 @@ img {
   text-decoration: none;
 }
 .pubyear{
-  margin:30px;
+  margin-bottom:30px;
 }
 
 .news-descr{
