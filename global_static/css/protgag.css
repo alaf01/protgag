@@ -1,6 +1,12 @@
 {% load static %}
 
-@media screen and (min-width: 901px) {
+@media screen and (min-width: 1001px) {
+  .inside {
+  padding-left: 10%;
+  padding-right: 10%;
+  font-size: x-large;
+
+}
   .intro h1 {
   line-height: 1.5;
   display: inline-block;
@@ -14,13 +20,21 @@
   max-width: 25%;
   max-height: 400px;
 }
-  .wider{
-  max-width: 45%;
-}
 }
 
-/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
-@media screen and (max-width: 900px) {
+/* If the screen size is 900px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 1000px) {
+  .big{
+  font-size: 3rem;
+  }
+  .nav-item{
+  font-size: x-large;
+  }
+  .inside {
+  padding-left: 5%;
+  padding-right: 5%;
+  font-size: x-large;
+}
   .intro h1 {
   line-height: 1.5;
   display: inline-block;
@@ -34,9 +48,7 @@
   max-width: 35%;
   max-height: 400px;
 }
-  .wider{
-  max-width: 55%;
-}
+
 }
 body {
   background-color: #f8f7f1;
@@ -82,8 +94,6 @@ img {
 }
 
 .inside{
-  padding-left: 10%;
-  padding-right: 10%;
   color: #162777;
   text-align: justify;
   text-justify: inter-word;
@@ -205,6 +215,9 @@ img.flag{
 }
 .h-350{
   max-height: 300px;
+}
+.white:hover{
+  color:white!important;
 }
 .nav-item:hover{
   background-color: #6887e5;
