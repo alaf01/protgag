@@ -12,7 +12,9 @@ class Article(models.Model):
     def __str__(self):
         return '{}-{}-{}'.format(self.__class__.__name__, self.journal, self.year)
 
+
 class News(models.Model):
+    date = models.TextField(blank=True, null=True)
     title = models.CharField(max_length=200)
     description = models.TextField()
     link = models.URLField(blank=True, null=True)
@@ -24,6 +26,7 @@ class News(models.Model):
     def __str__(self):
         return '{}-{}'.format(self.__class__.__name__, self.title)
 
+
 class Member(models.Model):
     name = models.CharField(max_length=40)
     position = models.CharField(max_length=100)
@@ -34,5 +37,3 @@ class Member(models.Model):
 
     def __str__(self):
         return '{}-{}'.format(self.__class__.__name__, self.name)
-
-
