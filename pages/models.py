@@ -14,7 +14,7 @@ class Article(models.Model):
 
 
 class News(models.Model):
-    date = models.TextField(blank=True, null=True)
+    date = models.CharField(max_length=40, default='')
     title = models.CharField(max_length=200)
     description = models.TextField()
     link = models.URLField(blank=True, null=True)
