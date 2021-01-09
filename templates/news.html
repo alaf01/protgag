@@ -6,7 +6,7 @@
     {%for new in queryset %}
         <div class="news-descr">
             {% if new.date %}
-                <h3><b>{{ new.date }}</b></h3>
+                <h5><b>{{ new.date }}</b></h5>
             {% endif %}
             <h4><b>{{ new.title }}</b></h4>
         <p>{{ new.description }}</p>
