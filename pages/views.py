@@ -36,8 +36,8 @@ def preludium(request):
 
 
 def publications(request):
-    publications = Article.objects.all()
-    return render(request, "publications.html", {'publications': True, 'queryset': publications})
+    publications = Article.objects.all().order_by('-timestamp')
+    return render(request, "publications.html", {'publications': True, 'articles': publications})
 
 
 def members(request):
@@ -59,3 +59,4 @@ def contact(request):
 
 def positions(request):
     return render(request, "positions.html", {'positions': True})
+

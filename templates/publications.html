@@ -5,6 +5,14 @@
 {% block content %}
     <button class="btn btn-secondary btn-lg btn-block pubyear" type="button" data-toggle="collapse" data-target="#year2021" aria-expanded="true" aria-controls="year2021" >2021 <img src="{% static 'arrow_white.png' %}" width='50' alt=""></button>
     <div class="collapse show pubyear" id="year2021">
+            {% for article in articles %}
+        <p>
+        {{ article.authors |safe}} {{ article.title}}. <i> {{ article.journal}}.</i> {{ article.year }}.
+            {{ article.rest }}
+            <br>
+            <a href="{{ article.doi }}">{{ article.doi }}</a>
+        </p>
+        {% endfor %}
         <p><span class='team_paper'>Kogut M.M.</span>, <span class='team_paper'>Maszota-Zieleniak M.</span>,
             <span class='team_paper'>Marcisz M.</span>, <span class='team_paper'>Samsonov S.A.</span>
         Computational insights into the calcium ions role in protein-glycosaminoglycan systems.

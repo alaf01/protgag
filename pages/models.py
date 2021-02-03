@@ -8,6 +8,7 @@ class Article(models.Model):
     journal = models.CharField(max_length=400)
     rest = models.CharField(max_length=400, blank=True)
     doi = models.URLField(blank=True)
+    timestamp = models.DateTimeField(auto_now_add=True, db_index=True)
 
     def __str__(self):
         return '{}-{}-{}'.format(self.__class__.__name__, self.journal, self.year)
