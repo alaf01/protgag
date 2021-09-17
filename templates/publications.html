@@ -7,7 +7,7 @@
     <div class="collapse show pubyear" id="year2021">
             {% for article in articles %}
         <p>
-        {{ article.authors |safe}} {{ article.title}}. <i> {{ article.journal}}.</i> {{ article.year }}.
+        {{ article.authors |safe}} {{ article.title}} <i> {{ article.journal}}.</i> {{ article.year }}.
             {{ article.rest }}
             <br>
             <a href="{{ article.doi }}">{{ article.doi }}</a>
