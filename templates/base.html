@@ -92,10 +92,11 @@
             </ul>
           </div>
         </nav>
-    <div class="intro">
+    <div class="intro" >
         <h1>{% block thema %}{% endblock %}</h1>
     </div>
-      <div class="inside">
+      <div class="inside" style="background-image: url({% static 'flag/ukraine.jpeg' %});
+              background-repeat: no-repeat; width: 100%; background-position: center; background-size: cover;">
         {% block content %}
         {% endblock %}
       </div>
