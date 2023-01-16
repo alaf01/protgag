@@ -4,6 +4,20 @@
 {% block thema %}Publications{% endblock %}
 {% block content %}
 
+<button class="btn btn-secondary btn-lg btn-block pubyear" type="button" data-toggle="collapse" data-target="#year2023" aria-expanded="true" aria-controls="year2022" >2022 <img src="{% static 'arrow_white.png' %}" width='50' alt=""></button>
+<div class="collapse show pubyear" id="year2023">
+     {% for article in articles %}
+    {% if article.year == 2023 %}
+        <p>
+        {{ article.authors |safe}} {{ article.title}} <i> {{ article.journal}}.</i> {{ article.year }}.
+            {{ article.rest }}
+            <br>
+            <a href="{{ article.doi }}">{{ article.doi }}</a>
+        </p>
+    {% endif %}
+        {% endfor %}
+</div>
+
 <button class="btn btn-secondary btn-lg btn-block pubyear" type="button" data-toggle="collapse" data-target="#year2022" aria-expanded="true" aria-controls="year2022" >2022 <img src="{% static 'arrow_white.png' %}" width='50' alt=""></button>
 <div class="collapse show pubyear" id="year2022">
      {% for article in articles %}
