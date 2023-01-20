@@ -34,7 +34,7 @@
     <button class="btn btn-secondary btn-lg btn-block pubyear" type="button" data-toggle="collapse" data-target="#year2021" aria-expanded="true" aria-controls="year2021" >2021 <img src="{% static 'arrow_white.png' %}" width='50' alt=""></button>
     <div class="collapse pubyear" id="year2021">
             {% for article in articles %}
-        {% if article.year != 2022 %}
+        {% if article.year == 2021 %}
         <p>
         {{ article.authors |safe}} {{ article.title}} <i> {{ article.journal}}.</i> {{ article.year }}.
             {{ article.rest }}
