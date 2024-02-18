@@ -36,4 +36,5 @@ class Migration(migrations.Migration):
             name="title",
             field=models.TextField(),
         ),
+        migrations.RunPython(add_position_to_article),
     ]
