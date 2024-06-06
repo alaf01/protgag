@@ -1,0 +1,33 @@
+{% extends "projects.html" %}
+{% load static %}
+{% block title %}OPUS{% endblock %}
+{% block thema %}OPUS{% endblock %}
+{% block logos %}
+<div class="col-4 mx-auto my-auto"><img class="img" src="{% static 'images/NCN.jpg'%}" alt="EU logo"></div>
+{% endblock %}
+{% block intro %}
+    <h2><b>Decrypting the "sulfation code" of glycosaminoglycans for understanding their function in the extracellular matrix
+</b></h2>
+    <hr>
+<ul>
+    <li>Funding Programme: OPUS from National Science Centre (Poland) </li>
+    <li>Duration: 03.06.2024-02.06.2028</li>
+    <li>Budget: 2 128 604 PLN (494 000 EUR) </li>
+    <li>Project Leader: Sergey Samsonov</li>
+    <li><a href="https://ncn.gov.pl/sites/default/files/listy-rankingowe/2023-03-14-opkit45wac/streszczenia/585119-pl.pdf">Link to project description on NCN (Narodowe Centrum Nauki)</a></li>
+</ul>
+{% endblock %}
+{% block image %}
+        <img class="mx-auto my-auto d-block w- h-350" src="{% static "images/beethoven.png" %}" alt="preludium">
+{% endblock %}
+{% block description %}
+<p>
+    <button class="btn btn-secondary btn-lg" type="button" data-toggle="collapse" data-target="#abstract"
+            aria-expanded="false" aria-controls="abstract"><b>Abstract</b></button>
+
+</p>
+    <div class="collapse project" id="abstract">
+
+    <b>IGlycosaminoglycans (GAGs) constitute a class of linear anionic periodic polysaccharides composed of repetitive disaccharide units that contain an uronic acid residue and an amino sugar residue. GAGs are located in the extracellular matrix of the cell where they interact with protein targets as cytokines/chemokines, growth factors, collagen and various enzymes as well as with other biomolecules and so participate in key biological processes as anticoagulation, cell adhesion, differentiation, communication and signaling within tissue-specific context. Disruptions of these interactions regulated in a complex manner lead to pathologies as Alzheimer’s or Parkinsson’s diseases, mucopolysaccharidoses, cancerogenesis, affect tissue regeneration and are important in the onset of viral infections (e.g. SARS-CoV-2). Therefore, the GAGs are promising targets for potential applications in medicine, in general, and tissue regeneration strategies, in particular. GAGs are classified into a few groups depending on their composition and could be sulfated at different positions which makes them highly heterogeneous. Their sulfation pattern constitutes the “sulfation code”, which is central in the research on GAGs. Thus, deciphering of the “sulfation code” encoding how the specific distribution of the sulfate groups determines the interactions of a specific GAG with proteins and other biological macromolecules is essential and necessary for understanding GAG function, which is, in turn, of high importance for the development of novel medical approaches exploiting GAG molecular properties. Despite recent advances in the GAG research, both experimental and theoretical approaches face challenges to effectively analyze GAG containining biological systems due to their flexibility, periodicity and high chemical heterogeneity. The physico-chemical principles of GAG recognition, the role of solvent and ions in GAG-mediated interactions and GAG binding specificity still need to be further understood. Apart from this, there is a lack of GAG-specific computational tools that can be effectively used to model biologically relevant systems containing these molecules. To address these challenges, the principal aim of this project proposal is to decipher the GAG “sulfation code”, which we will accomplish through a series of specific goals. These goals include: 1. modeling particular protein (cathepsin proteases, integrins, biglycan, insulin-like receptor, amyloids) and peptide (e.g. LL-37) complexes with GAGs at molecular level; 2. characterization of the ion (e.g. Ca2+, Mg2+, Mn2+, Zn2+) and solvent effects as well as the impact of solvent computational models in GAG recognition; 3. rigorous analysis of GAG recognition specificity on a representative dataset of GAG oligosaccharides and design GAG-based mimetics and GAG specific binders (linear and cyclic peptides, engineered proteins). To further facilitate the achievement of the aim, other goals are defined: 4. establishment and maintainence of a database storing simulation data on protein-GAG interactions for particular protein families (cathepsin proteases, growth factors, chemokines); 5. design of novel theoretical approaches (molecular docking and free energy calculation protocols, coarse-grained models) to effectively treat GAG containing systems at multiscale. To decrypt the “sulfation code” we will apply computational techniques as molecular docking (both conventional and particularly developed for GAG containing systems), molecular dynamics (all atom and coarse-grained), free energy calculations and machine learning (e.g. principal component analysis and artificial neural networks) complemented by the data from our collaboration partners originated from GAG and protein synthesis, NMR, SPR, SAXS, ITC, MS, biochemical and cell assays experiments. Previously, we proved to be one of the substantially contributing research groups in the GAG theoretical research, so this project represents a logical follow-on step in our systematic investigations of the GAG molecular properties. To summarize the significance of the proposal, the expected results will provide novel insights into different aspects in GAG research underlying the GAG “sulfation code”. The fundamental understanding of the “sulfation code” in terms of GAG recognition and function will thus enable us to rationally design GAG-based drugs for their implementation within novel strategies in biomaterial science for tissue regeneration. </b></div>
+<p>
+{% endblock %}
