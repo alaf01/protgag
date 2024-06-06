@@ -35,6 +35,9 @@ def preludium(request):
     return render(request, "preludium.html", {'preludium': True})
 
 
+def opus(request):
+    return render(request, "opus.html", {'opus': True})
+    
 def publications(request):
     publications = Article.objects.all().order_by('-timestamp')
     return render(request, "publications.html", {'publications': True, 'articles': publications})
