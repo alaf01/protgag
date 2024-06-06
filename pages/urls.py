@@ -13,6 +13,7 @@ urlpatterns = [
     path('projects/beethoven', views.beethoven, name="beethoven"),
     path('projects/preludium', views.preludium, name="preludium"),
     path('projects/polonez', views.polonez, name="polonez"),
+    path('projects/opus', views.opus, name="opus"),
     path('publications/', views.publications, name="publications"),
     path('members/', views.members, name="members"),
     path('collaborations/', views.collaborations, name="collaborations"),
