@@ -3,7 +3,19 @@
 {% block title %}Publications{% endblock %}
 {% block thema %}Publications{% endblock %}
 {% block content %}
-
+<button class="btn btn-secondary btn-lg btn-block pubyear" type="button" data-toggle="collapse" data-target="#year2024" aria-expanded="true" aria-controls="year2024" >2024 <img src="{% static 'arrow_white.png' %}" width='50' alt=""></button>
+<div class="collapse show pubyear" id="year2024">
+     {% for article in articles %}
+    {% if article.year == 2024 %}
+        <p>
+        {{ article.authors |safe}} {{ article.title}} <i> {{ article.journal}}.</i> {{ article.year }}.
+            {{ article.rest }}
+            <br>
+            <a href="{{ article.doi }}">{{ article.doi }}</a>
+        </p>
+    {% endif %}
+        {% endfor %}
+</div>
 <button class="btn btn-secondary btn-lg btn-block pubyear" type="button" data-toggle="collapse" data-target="#year2023" aria-expanded="true" aria-controls="year2023" >2023 <img src="{% static 'arrow_white.png' %}" width='50' alt=""></button>
 <div class="collapse show pubyear" id="year2023">
      {% for article in articles %}
